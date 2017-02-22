@@ -63,7 +63,7 @@
             <select name="type" class="form-control" required>
                 <option>โปรดเลือก</option>
                 <option value="3">อาจารย์</option>
-                <option value="2">ผู้ดูแลข้อมูลประจำคณะ</option>
+                <option value="2">ผู้ดูแล (ผู้ปกครอง)</option>
             </select>
             @if ($errors->has('type'))
             <span class="help-block">{{ $errors->first('type') }}</span>
@@ -71,9 +71,9 @@
         </div>
 
         <div class="form-group{{ ($errors->has('faculty')) ? ' has-error has-feedback' : '' }}">
-            <label for="faculty">คณะที่สังกัด</label>
+            <label for="faculty">โรงเรียน</label>
             <select name="faculty" class="form-control" required readonly>
-                <option value="1" selected>วิทยาศาสตร์</option>
+                <option value="1" selected>สตรีวิทยา 2</option>
             </select>
             @if ($errors->has('faculty'))
             <span class="help-block">{{ $errors->first('faculty') }}</span>

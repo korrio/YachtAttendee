@@ -52,7 +52,7 @@
         </button>
         <a href="/password/reset" class="inside-panel-link">ลืมรหัสผ่าน</a>
     </form>
-    <a href="/register" class="outside-panel-link">ลงทะเบียนเข้าใช้ระบบ</a>
+    <!-- <a href="/register" class="outside-panel-link">ลงทะเบียนเข้าใช้ระบบ</a> -->
     
     <script src="{{ mix('js/app.js') }}"></script>
 </body>

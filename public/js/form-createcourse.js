@@ -23,4 +23,6 @@ $(document).ready( function() {
     $('#end_date').on('dp.change', function(e) {
         $('#start_date').data('DateTimePicker').maxDate(e.date);
     });
+
+    
 });

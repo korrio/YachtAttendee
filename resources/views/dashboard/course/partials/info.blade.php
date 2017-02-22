@@ -9,14 +9,14 @@
 	<div class="form-group">
 		<label for="code" class="col-sm-3 control-label">รหัสวิชา</label>
 		<div class="col-sm-4">
-			<p class="form-control-static">1106209</p>
+			<p class="form-control-static">PreAD</p>
 		</div>
 	</div>
 
 	<div class="form-group">
 		<label for="name" class="col-sm-3 control-label">ชื่อวิชา</label>
 		<div class="col-sm-4">
-			<p class="form-control-static">Information System Security</p>
+			<p class="form-control-static">ปรับพื้นฐาน ม.4-5</p>
 		</div>
 	</div>
 
@@ -24,6 +24,13 @@
 		<label for="section" class="col-sm-3 control-label">Section</label>
 		<div class="col-sm-4">
 			<p class="form-control-static">1</p>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="section" class="col-sm-3 control-label">รอบ</label>
+		<div class="col-sm-4">
+			<p class="form-control-static"><span class="label label-success">เช้า 1</span> <span class="label label-success">เช้า 2</span></p>
 		</div>
 	</div>
 
@@ -58,7 +65,7 @@
 		<label for="times" class="col-sm-3 control-label">เวลาเรียน</label>
 		<div class="col-sm-9">
 			<div class="form-inline">
-				<p class="form-control-static">วัน จันทร์ เวลา 9:00 ถึง 12:00 ห้อง SC412</p>
+				<p class="form-control-static">วัน จันทร์ เวลา 9:00 ถึง 12:00 ZA-SHI สาขาสยาม</p>
 			</div>
 		</div>
 	</div>
@@ -83,12 +90,12 @@
 		</div>
 	</div>
 	
-	<div class="form-group">
+<!-- 	<div class="form-group">
 		<label for="start_date" class="col-sm-3 control-label">รูปแบบการสุ่มรายชื่อ</label>
 		<div class="col-sm-4">
 			<p class="form-control-static">สุ่มแบบคละ</p>
 		</div>
-	</div>
+	</div> -->
 
 	<div class="form-group">
 		<label for="late_time" class="col-sm-3 control-label">เวลาที่เข้าสายได้ (นาที)</label>

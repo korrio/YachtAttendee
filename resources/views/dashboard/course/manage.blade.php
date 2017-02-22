@@ -1,17 +1,17 @@
 @extends('layouts.dashboard')
 
-@section('title', 'จัดการรายวิชา 1106209-59')
+@section('title', 'จัดการรายวิชา DREAM 1, DREAM 2, PRE-AD')
 
 @section('content')
 <h1 class="dashboard-title">
 	จัดการรายวิชา
 	<br>
-	<small>1106209 Information System Security (2559 ภาคปลาย Sec.1)</small>
+	<small>คอร์สภาษาญี่ปุ่นพื้นฐาน DREAM 1, DREAM 2, PRE-AD</small>
 </h1>
 
 <ol class="breadcrumb">
 	<li><a href="{{ url('/dashboard') }}">Dashboard</a></li>
-	<li class="active">1106209 Information System Security (2559 ภาคปลาย Sec.1)</li>
+	<li class="active">คอร์สภาษาญี่ปุ่นพื้นฐาน DREAM 1, DREAM 2, PRE-AD</li>
 </ol>
 
 <div class="panel panel-info dashboard-panel">

@@ -14,7 +14,8 @@
 
             <!-- Branding Image -->
             <a class="navbar-brand" href="{{ url('/dashboard') }}">
-                {{ config('app.name', 'Laravel') }}
+            เช็คชื่อนักเรียน 
+                <!-- {{ config('app.name', 'Class Attendance Check') }} -->
             </a>
         </div>
 

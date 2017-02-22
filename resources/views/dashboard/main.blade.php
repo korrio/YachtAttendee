@@ -22,8 +22,8 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td>1106209</td><td>Information System Security</td>
-					<td>2559 (ภาคปลาย)</td>
+					<td>PreAD</td><td>ปรับพื้นฐาน ม.4-ม.5</td>
+					<td>2560 (SUMMER)</td>
 					<td>
 						<a href="/dashboard/course/1106209-59" class="btn btn-raised-primary">
 							จัดการ
@@ -31,8 +31,8 @@
 					</td>
 				</tr>
 				<tr>
-					<td>1106501</td><td>Embeded Devuce Programming</td>
-					<td>2559 (ภาคปลาย)</td>
+					<td>ADMISSION1</td><td>อัพเดท PAT ญี่ปุ่น</td>
+					<td>2560 (SUMMER)</td>
 					<td>
 						<button class="btn btn-raised-primary">
 							จัดการ

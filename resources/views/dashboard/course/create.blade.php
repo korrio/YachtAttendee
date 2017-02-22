@@ -45,8 +45,39 @@
 			<div class="form-group">
 				<label for="section" class="col-sm-3 control-label">Section</label>
 				<div class="col-sm-4">
-					<input type="number" name="section" placeholder="Section" 
+					
+					<input type="number" name="section" placeholder="section" 
 					class="form-control" required>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="section" class="col-sm-3 control-label">รอบ</label>
+				<div class="col-sm-4">
+					
+					<ul class="list-group">
+                    <li class="list-group-item">
+                        เช้า
+                        <div class="material-switch pull-right">
+                            <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+                            <label for="someSwitchOptionDefault" class="label-default"></label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        บ่าย
+                        <div class="material-switch pull-right">
+                            <input id="someSwitchOptionSuccess" name="someSwitchOption001" type="checkbox"/>
+                            <label for="someSwitchOptionSuccess" class="label-success"></label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        เย็น
+                        <div class="material-switch pull-right">
+                            <input id="someSwitchOptionWarning" name="someSwitchOption001" type="checkbox"/>
+                            <label for="someSwitchOptionWarning" class="label-warning"></label>
+                        </div>
+                    </li>
+                </ul>
 				</div>
 			</div>
 
@@ -54,9 +85,9 @@
 				<label for="semester" class="col-sm-3 control-label">ภาคการศึกษา</label>
 				<div class="col-sm-4">
 					<select name="semester" class="form-control">
-						<option value="1">ภาคต้น</option>
-						<option value="2">ภาคปลาย</option>
-						<option value="3">ภาคฤดูร้อน</option>
+						<option value="1">SUMMER</option>
+						<option value="2">เทอม 1</option>
+						<option value="3">เทอม 2</option>
 					</select>
 				</div>
 			</div>
@@ -75,7 +106,7 @@
 			</div>
 
 			<div class="form-group">
-				<label for="studentsList" class="col-sm-3 control-label">รายชื่อนักศึกษา</label>
+				<label for="studentsList" class="col-sm-3 control-label">รายชื่อนักเรียน</label>
 				<div class="col-sm-4">
 					<label class="btn btn-raised-default" style="display: inline-block;">
     					เลือกไฟล์ <input type="file" 
@@ -126,7 +157,7 @@
 						<div class="form-group">
 							ห้อง
 							<select name="room[]" class="form-control">
-								<option value="SC412">SC412</option>
+								<option value="siam">SIAM</option>
 							</select>
 						</div>
 					</div>
