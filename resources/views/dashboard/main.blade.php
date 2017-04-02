@@ -3,14 +3,14 @@
 @section('title', 'Dashboard')
 
 @section('content')
-<h1 class="dashboard-title">Dashboard</h1>
+<h1 class="dashboard-title">ABC Pte.Ltd.</h1>
 
 <div class="panel panel-info dashboard-panel">
 
 	<div class="panel-heading">
-		<span>รายชื่อวิชาที่สอน</span>
+		<span>Charters (2/3) -- Upgrade to Pro package unlock form/vendor limitation</span>
 		<a href="/dashboard/course/add" class="btn btn-raised-success pull-right">
-			เพิ่มรายวิชาใหม่
+			Create new form
 		</a>
 		<div class="clearfix"></div>
 	</div>
@@ -18,25 +18,27 @@
 	<div class="panel-body">
 		<table class="table">
 			<thead>
-				<th>รหัสวิชา</th><th>ชื่อวิชา</th><th>ปีการศึกษา</th><th>จัดการ</th>
+				<th>Vendor</th><th>Main Organiser</th><th>Date</th><th>Form URL</th><th>Manage</th>
 			</thead>
 			<tbody>
 				<tr>
-					<td>PreAD</td><td>ปรับพื้นฐาน ม.4-ม.5</td>
-					<td>2560 (SUMMER)</td>
+					<td>Vendor A</td><td>Mr.Lee Jung</td>
+					<td>3/1/2017</td>
+					<td><input type="text" value="http://yac.ht/aKcs2" /></td>
 					<td>
 						<a href="/dashboard/course/1106209-59" class="btn btn-raised-primary">
-							จัดการ
+							Manage
 						</a>
 					</td>
 				</tr>
 				<tr>
-					<td>ADMISSION1</td><td>อัพเดท PAT ญี่ปุ่น</td>
-					<td>2560 (SUMMER)</td>
+					<td>Vendor B</td><td>Mr.John Doe</td>
+					<td>1/3/2017</td>
+					<td><input type="text" value="http://yac.ht/kNmn5" /></td>
 					<td>
-						<button class="btn btn-raised-primary">
-							จัดการ
-						</button>
+						<a href="/dashboard/course/1106209-59" class="btn btn-raised-primary">
+							Manage
+						</a>
 					</td>
 				</tr>
 			</tbody>

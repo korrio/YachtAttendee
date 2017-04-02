@@ -1,23 +1,23 @@
 @extends('layouts.dashboard')
 
-@section('title', 'จัดการรายวิชา DREAM 1, DREAM 2, PRE-AD')
+@section('title', 'Manage Vendor A - Attendee')
 
 @section('content')
 <h1 class="dashboard-title">
-	จัดการรายวิชา
+  Vendor A
 	<br>
-	<small>คอร์สภาษาญี่ปุ่นพื้นฐาน DREAM 1, DREAM 2, PRE-AD</small>
+	<!-- <small>คอร์สภาษาญี่ปุ่นพื้นฐาน DREAM 1, DREAM 2, PRE-AD</small> -->
 </h1>
 
 <ol class="breadcrumb">
 	<li><a href="{{ url('/dashboard') }}">Dashboard</a></li>
-	<li class="active">คอร์สภาษาญี่ปุ่นพื้นฐาน DREAM 1, DREAM 2, PRE-AD</li>
+	<li class="active">Manage Vendor A</li>
 </ol>
 
 <div class="panel panel-info dashboard-panel">
 
 	<div class="panel-heading">
-		<span>จัดการรายวิชา</span>
+		<span>Manage Vendor A</span>
 	</div>
 
 	<div class="panel-body">
@@ -26,17 +26,17 @@
 		<ul class="nav nav-tabs" id="coursetab">
 			<li class="active">
 				<a href="#schedule" aria-controls="schedule" role="tab" data-toggle="tab">
-					การเช็คชื่อ
+					Charter
 				</a>
 			</li>
-			<li>
+<!-- 			<li>
 				<a href="#students" aria-controls="students" role="tab" data-toggle="tab">
-					รายชื่อนักศึกษา
+					Attendee
 				</a>
-			</li>
+			</li> -->
 			<li>
 				<a href="#info" aria-controls="info" role="tab" data-toggle="tab">
-					ข้อมูลรายวิชา
+					Vendor Info
 				</a>
 			</li>
 		</ul>

@@ -2,32 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>AttendCheck | Register</title>
+    <title>YatchAttend | Register</title>
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 </head>
 <body class="auth">
     <div class="logo">
-        <i class="fa fa-check-square-o"></i> AttendCheck
+        <i class="fa fa-check-square-o"></i> YatchAttend
     </div>
 
     <form action="/register" method="POST" class="panel panel-default auth-panel register-panel">
         {{ csrf_field() }}
-        <legend class="form-header">ลงทะเบียน</legend>
+        <legend class="form-header">Register</legend>
         
         @if(count($errors) > 0)
         <div class="alert alert-danger alert-dismissible" role="alert">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
-            <strong>มีข้อผิดพลาดเกิดขึ้น!</strong> กรุณาแก้ไข้ข้อมูลแล้วลองใหม่อีกครั้ง
+            <strong>Error !</strong> Please try agian.
         </div>
         @endif
 
-        <legend>ข้อมูลส่วนตัว</legend>
+        <legend>Profile</legend>
 
         <div class="form-group{{ ($errors->has('title')) ? ' has-error has-feedback' : '' }}">
-            <label for="title">คำนำหน้าชื่อ</label>
-            <input type="text" name="title" class="form-control" placeholder="คำนำหน้าชื่อ" value="{{ old('title') }}" required>
+            <label for="title">Title</label>
+            <input type="text" name="title" class="form-control" placeholder="Mr." value="{{ old('title') }}" required>
             @if ($errors->has('title'))
             <span class="form-control-feedback" aria-hidden="true">
                 <i class="fa fa-times"></i>
@@ -37,8 +37,8 @@
         </div>
 
         <div class="form-group{{ ($errors->has('name')) ? ' has-error has-feedback' : '' }}">
-            <label for="name">ชื่อ</label>
-            <input type="text" name="name" class="form-control" placeholder="ชื่อ" value="{{ old('name') }}" required>
+            <label for="name">Name</label>
+            <input type="text" name="name" class="form-control" placeholder="John" value="{{ old('name') }}" required>
             @if ($errors->has('name'))
             <span class="form-control-feedback" aria-hidden="true">
                 <i class="fa fa-times"></i>
@@ -48,8 +48,8 @@
         </div>
 
         <div class="form-group{{ ($errors->has('lastname')) ? ' has-error has-feedback' : '' }}">
-            <label for="lastname">นามสกุล</label>
-            <input type="text" name="lastname" class="form-control" placeholder="นามสกุล" value="{{ old('lastname') }}" required>
+            <label for="lastname">Surname</label>
+            <input type="text" name="lastname" class="form-control" placeholder="Lennon" value="{{ old('lastname') }}" required>
             @if ($errors->has('lastname'))
             <span class="form-control-feedback" aria-hidden="true">
                 <i class="fa fa-times"></i>
@@ -59,11 +59,11 @@
         </div>
 
         <div class="form-group{{ ($errors->has('type')) ? ' has-error has-feedback' : '' }}">
-            <label for="type">ประเภทผู้ใช้งาน</label>
+            <label for="type">What kind of user type you are registering ?</label>
             <select name="type" class="form-control" required>
-                <option>โปรดเลือก</option>
-                <option value="3">อาจารย์</option>
-                <option value="2">ผู้ดูแล (ผู้ปกครอง)</option>
+                <option value="1">Attendee</option>
+                <option value="2">Charter / Organizer</option>
+                 <option value="3">Vendor</option>
             </select>
             @if ($errors->has('type'))
             <span class="help-block">{{ $errors->first('type') }}</span>
@@ -71,16 +71,16 @@
         </div>
 
         <div class="form-group{{ ($errors->has('faculty')) ? ' has-error has-feedback' : '' }}">
-            <label for="faculty">โรงเรียน</label>
-            <select name="faculty" class="form-control" required readonly>
-                <option value="1" selected>สตรีวิทยา 2</option>
+            <label for="organization">Organization</label>
+            <select name="organization" class="form-control" required readonly>
+                <option value="1" selected>AAA Pte.Ltd.</option>
             </select>
             @if ($errors->has('faculty'))
             <span class="help-block">{{ $errors->first('faculty') }}</span>
             @endif
         </div>
 
-        <legend>ข้อมูลการเข้าระบบ</legend>
+        <legend>Account Information</legend>
 
         <div class="form-group{{ ($errors->has('email')) ? ' has-error has-feedback' : '' }}">
             <label for="email">Email</label>
@@ -116,8 +116,8 @@
         </div>
 
         <div class="form-group{{ ($errors->has('password_confirmation')) ? ' has-error has-feedback' : '' }}">
-            <label for="password_confirmation">Password (อีกครั้ง)</label>
-            <input type="password" name="password_confirmation" class="form-control" placeholder="Password (อีกครั้ง)" required>
+            <label for="password_confirmation">Password (Repeat)</label>
+            <input type="password" name="password_confirmation" class="form-control" placeholder="Password (Repeat)" required>
             @if ($errors->has('password_confirmation'))
             <span class="form-control-feedback" aria-hidden="true">
                 <i class="fa fa-times"></i>
@@ -127,10 +127,10 @@
         </div>
 
         <button type="submit" name="submit" class="btn btn-raised-success btn-lg btn-block">
-            ลงทะเบียน
+            Register
         </button>
     </form>
-    <a href="/login" class="outside-panel-link">เข้าสู่ระบบ</a>
+    <a href="/login" class="outside-panel-link">Login</a>
     <script src="{{ mix('js/app.js') }}"></script>
 </body>
 </html>

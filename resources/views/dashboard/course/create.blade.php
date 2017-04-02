@@ -1,19 +1,19 @@
 @extends('layouts.dashboard')
 
-@section('title', 'เพิ่มรายวิชาใหม่')
+@section('title', 'New Charter Form')
 
 @section('content')
-<h1 class="dashboard-title">เพิ่มรายวิชาใหม่</h1>
+<h1 class="dashboard-title">Create New Charter</h1>
 
 <ol class="breadcrumb">
 	<li><a href="{{ url('/dashboard') }}">Dashboard</a></li>
-	<li class="active">เพิ่มรายวิชาใหม่</li>
+	<li class="active">Create New Charter Form</li>
 </ol>
 
 <div class="panel panel-info dashboard-panel">
 
 	<div class="panel-heading">
-		<span>เพิ่มรายวิชาใหม่</span>
+		<span>Create</span>
 	</div>
 
 	<div class="panel-body">
@@ -22,27 +22,60 @@
 			
 			<div class="row">
 				<div class="col-sm-3 form-legend">
-					<legend class="text-right">ข้อมูลทั่วไป</legend>
+					<legend class="text-right">General</legend>
 				</div>
 			</div>
 
 			<div class="form-group">
-				<label for="code" class="col-sm-3 control-label">รหัสวิชา</label>
+				<label for="code" class="col-sm-3 control-label">Company Name</label>
 				<div class="col-sm-4">
-					<input type="text" name="code" placeholder="รหัสวิชา" 
+					<input type="text" name="code" placeholder="" 
 					class="form-control" required>
 				</div>
 			</div>
 
 			<div class="form-group">
-				<label for="name" class="col-sm-3 control-label">ชื่อวิชา</label>
+				<label for="name" class="col-sm-3 control-label">Marina Name</label>
 				<div class="col-sm-4">
-					<input type="text" name="name" placeholder="ชื่อวิชา" 
+					<input type="text" name="name" placeholder="" 
 					class="form-control" required>
 				</div>
 			</div>
 
 			<div class="form-group">
+				<label for="semester" class="col-sm-3 control-label">Country</label>
+				<div class="col-sm-4">
+					<select name="semester" class="form-control">
+						<option value="1">Singapore</option>
+						<option value="2">Malaysia</option>
+						<option value="3">Indonesia</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-3 form-legend">
+					<legend class="text-right">Main client</legend>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="code" class="col-sm-3 control-label">First name</label>
+				<div class="col-sm-4">
+					<input type="text" name="code" placeholder="" 
+					class="form-control" required>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="code" class="col-sm-3 control-label">Last name</label>
+				<div class="col-sm-4">
+					<input type="text" name="code" placeholder="" 
+					class="form-control" required>
+				</div>
+			</div>
+
+		<!-- 	<div class="form-group">
 				<label for="section" class="col-sm-3 control-label">Section</label>
 				<div class="col-sm-4">
 					
@@ -118,28 +151,28 @@
 					สามารถอัพโหลดภายหลังได้ 
 					<a href="#">ดูรูปแบบไฟล์ Excel ที่เหมาะสม</a></span>
 				</div>
-			</div>
+			</div> -->
 			
 			<div class="row">
 				<div class="col-sm-3 form-legend">
-					<legend class="text-right">ข้อมูลเวลาเรียน</legend>
+					<legend class="text-right">Charter time</legend>
 				</div>
 			</div>
 
 			<div class="form-group">
-				<label for="times" class="col-sm-3 control-label">เวลาเรียน</label>
+				<label for="times" class="col-sm-3 control-label">Duration</label>
 				<div class="col-sm-9">
 					<div class="form-inline">
-						<div class="form-group">
-							<label for="day">วัน</label>
+						<!-- <div class="form-group">
+							<label for="day">Day</label>
 							<select name="day[]" class="form-control">
 								@foreach(getDaysOfWeek() as $value => $day)
 								<option value="{{$value}}">{{$day}}</option>
 								@endforeach
 							</select>
-						</div>
+						</div> -->
 						<div class="form-group">
-							เวลา 
+							 
 							<select name="start_time[]" class="form-control">
 								@foreach(hoursRange(800, 1800) as $value => $time)
 								<option value="{{$value}}">{{$time}}</option>
@@ -147,7 +180,7 @@
 							</select>
 						</div>
 						<div class="form-group">
-							ถึง
+							to
 							<select name="end_time[]" class="form-control">
 								@foreach(hoursRange(900, 2000) as $value => $time)
 								<option value="{{$value}}">{{$time}}</option>
@@ -155,20 +188,30 @@
 							</select>
 						</div>
 						<div class="form-group">
-							ห้อง
-							<select name="room[]" class="form-control">
-								<option value="siam">SIAM</option>
-							</select>
+							<label for="start_date" class="col-sm-3 control-label">Date</label>
+				<div class="col-sm-4">
+					<div class='input-group date' id="start_date">
+                		<input type='text' class="form-control" name="start_date" placeholder="3/3/2017" />
+                		<span class="input-group-addon">
+                    		<span class="fa fa-calendar">
+                    		</span>
+                		</span>
+            		</div>
+				</div>
 						</div>
 					</div>
 
 					<span class="help-block">
-						<a href="#">+ เพิ่มเวลาเรียน</a>
+						<a href="#">+ Add more</a>
 					</span>
 				</div>
 			</div>
 
-			<div class="form-group">
+<!-- 				<div class="form-group">
+					<label for="times" class="col-sm-3 control-label"></label>
+				</div> -->
+
+		<!-- 	<div class="form-group">
 				<label for="start_date" class="col-sm-3 control-label">วันที่เริ่มเรียนคาบแรก</label>
 				<div class="col-sm-4">
 					<div class='input-group date' id="start_date">
@@ -192,36 +235,36 @@
                 		</span>
             		</div>
 				</div>
-			</div>
+			</div> -->
 
 			<div class="row">
 				<div class="col-sm-3 form-legend">
-					<legend class="text-right">Option รายวิชา</legend>
+					<legend class="text-right">Option</legend>
 				</div>
 			</div>
 			
 			<div class="form-group">
-				<label for="start_date" class="col-sm-3 control-label">รูปแบบการสุ่มรายชื่อ</label>
+				<label for="start_date" class="col-sm-3 control-label">First option</label>
 				<div class="col-sm-4">
 					<div class="radio">
 						<label>
 							<input type="radio" name="random_method" value="1" checked>
-							สุ่มแบบคละ
+							option 1
 						</label>
 					</div>
 					<div class="radio">
 						<label>
 							<input type="radio" name="random_method" value="2">
-							สุ่มแบบปกติ
+							option 2
 						</label>
 					</div>
 				</div>
 			</div>
 
 			<div class="form-group">
-				<label for="late_time" class="col-sm-3 control-label">เวลาที่เข้าสายได้ (นาที)</label>
+				<label for="late_time" class="col-sm-3 control-label">Specific needs (If any)</label>
 				<div class="col-sm-4">
-					<input type="number" name="late_time" placeholder="เวลาที่เข้าสายได้ (นาที)" 
+					<input type="number" name="late_time" placeholder="" 
 					value="15" class="form-control" required>
 				</div>
 			</div>
@@ -229,9 +272,9 @@
 			<div class="row">
 				<div class="col-sm-3 col-sm-offset-3">
 					<button type="submit" class="btn btn-raised-success">
-						เพิ่มรายวิชา
+						Create
 					</button>
-					<a href="#">ยกเลิก</a>
+					<a href="#">Dismiss</a>
 				</div>
 			</div>
 		</form>

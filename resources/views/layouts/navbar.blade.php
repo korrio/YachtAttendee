@@ -14,7 +14,7 @@
 
             <!-- Branding Image -->
             <a class="navbar-brand" href="{{ url('/dashboard') }}">
-            เช็คชื่อนักเรียน 
+            YachtAttend 
                 <!-- {{ config('app.name', 'Class Attendance Check') }} -->
             </a>
         </div>

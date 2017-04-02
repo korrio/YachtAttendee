@@ -2,23 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>AttendCheck | Login</title>
+    <title>YatchAttend | Login</title>
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 </head>
 <body class="auth">
     <div class="logo">
-        <i class="fa fa-check-square-o"></i> AttendCheck
+        <i class="fa fa-check-square-o"></i> YatchAttend
     </div>
 
     <form action="/login" method="POST" class="panel panel-default auth-panel">
         {{ csrf_field() }}
-        <legend class="form-header">เข้าสู่ระบบ</legend>
+        <legend class="form-header">Login</legend>
         
         @if(session('status'))
         <div class="alert alert-danger alert-dismissible" role="alert">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             <strong>
-                <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> ไม่สามารถ Login ได้
+                <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Can't Login
             </strong> 
             <br> 
             {{ session('status') }}
@@ -48,11 +48,11 @@
         </div>
 
         <button type="submit" class="btn btn-raised-success btn-lg btn-block" name="submit">
-            เข้าสู่ระบบ
+            Login
         </button>
-        <a href="/password/reset" class="inside-panel-link">ลืมรหัสผ่าน</a>
+        <a href="/password/reset" class="inside-panel-link">Forget Password</a>
     </form>
-    <!-- <a href="/register" class="outside-panel-link">ลงทะเบียนเข้าใช้ระบบ</a> -->
+    <a href="/register" class="outside-panel-link">Register</a>
     
     <script src="{{ mix('js/app.js') }}"></script>
 </body>

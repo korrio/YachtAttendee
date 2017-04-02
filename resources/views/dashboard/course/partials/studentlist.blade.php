@@ -1,25 +1,28 @@
-{{-- <div>
+<div>
 	<button class="btn btn-raised-primary pull-right">
-		<i class="fa fa-download"></i> Export ทั้งหมด
+		<i class="fa fa-download"></i> Export All
 	</button>
 	<div class="clearfix"></div>
-</div> --}}
+</div> 
 <table class="table table-hover">
 	<thead>
-		<th>ชื่อ</th>
-		<th>เข้าเรียน/สาย/ขาด</th>
-		<th>% การขาด</th>
-		<th>ดูข้อมูล</th>
+		<th>(ID) Name</th>
+		<th>Nationality</th>
+		<th>Email</th>
+		<th>Manage</th>
 	</thead>
 	<tbody>
 		<tr class="clickable-row" 
 		data-href="{{ url('/dashboard/student/5611400924') }}">
-			<td>5611400924 นายธนะพงศ์ ประทุมชาติ</td>
-			<td>3/0/1</td>
-			<td><span class="text-success">20%</span></td>
+			<td>5611400924 Mr.Joshan Realm</td>
+			<td>Singapore</td>
+			<td><span class="text-success">josh12@gmail.com</span></td>
 			<td>
 				<a href="{{ url('/dashboard/student/5611400924') }}" class="btn btn-raised-primary">
-					ดูข้อมูล
+					Manage
+				</a>
+				<a href="{{ url('/dashboard/student/5611400924') }}" class="btn btn-raised-fail">
+					Delete
 				</a>
 			</td>
 		</tr>
