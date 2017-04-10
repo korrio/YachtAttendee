@@ -26,6 +26,11 @@ class CourseController extends Controller
         return view('dashboard.course.create');
     }
 
+    public function attend()
+    {
+        return view('dashboard.course.attend');
+    }
+
     /**
      * Store a newly created resource in storage.
      *
